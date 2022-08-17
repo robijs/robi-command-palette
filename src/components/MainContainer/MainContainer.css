@@ -1,0 +1,17 @@
+.maincontainer {
+    position: relative;
+    flex: 1;
+    height: 100vh;
+    padding: 60px;
+    overflow: overlay;
+}
+
+.maincontainer.no-padding {
+    padding: 0px;
+}
+
+.maincontainer .title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0px;
+}
