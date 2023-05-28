@@ -25,35 +25,36 @@ function Template({ theme, mode }) {
     } = theme[mode];
     const ref = useRef();
 
-    // useEffect(() => {
-    //     async function downloadImage() {
-    //         const element = ref.current;
+    useEffect(() => {
+        async function downloadImage() {
+            const element = ref.current;
 
-    //         console.log(element);
+            console.log(element);
 
-    //         const canvas = await html2canvas(element);
+            const canvas = await html2canvas(element);
 
-    //         const data = canvas.toDataURL("image/png");
-    //         const link = document.createElement("a");
+            const data = canvas.toDataURL("image/png");
+            const link = document.createElement("a");
 
-    //         if (typeof link.download === "string") {
-    //             link.href = data;
-    //             link.download = "image.png";
+            if (typeof link.download === "string") {
+                link.href = data;
+                link.download = "robi.png";
 
-    //             document.body.appendChild(link);
-    //             link.click();
-    //             document.body.removeChild(link);
-    //         } else {
-    //             window.open(data);
-    //         }
-    //     }
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                window.open(data);
+            }
+        }
 
-    //     console.log(name);
+        console.log(name);
 
-    //     if (name === "Blue") {
-    //         downloadImage();
-    //     }
-    // }, [name]);
+        if (name === "Blue") {
+            // NOTE: Uncomment to download
+            // downloadImage();
+        }
+    }, [name]);
 
     return (
         <div
@@ -88,7 +89,8 @@ function Template({ theme, mode }) {
             >
                 <div className="theme-title">{name}</div>
                 <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    // style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{ display: "flex", gap: "10px" }}
                 >
                     <div
                         className="btn"
@@ -137,258 +139,258 @@ export default function MyTheme() {
                 borderColor: "#343a4080",
             },
         },
-        {
-            name: "Brown",
-            light: {
-                primary: "#A52A2A",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#A52A2A",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Gray",
-            light: {
-                primary: "#708090",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#708090",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Green",
-            light: {
-                primary: "#2E8B57",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#2E8B57",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Gold",
-            light: {
-                primary: "#B8860B",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#B8860B",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Magenta",
-            light: {
-                primary: "#8B008B",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#8B008B",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Orange",
-            light: {
-                primary: "#FF8C00",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#FF8C00",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Pink",
-            light: {
-                primary: "#C71585",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#C71585",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Purple",
-            light: {
-                primary: "#6A5ACD",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 20,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#a580f5",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 20,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Red",
-            light: {
-                primary: "#e63e44",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#fd4a50",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Slate",
-            light: {
-                primary: "#2F4F4F",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#2F4F4F",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Teal",
-            light: {
-                primary: "#008080",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#008080",
-                secondary: "#151515",
-                background: "#1e1e1e",
-                color: "#d4d4d4",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#242628",
-                borderColor: "#343a4080",
-            },
-        },
-        {
-            name: "Navy",
-            light: {
-                primary: "#051D49",
-                secondary: "#fff",
-                background: "#F8F8FC",
-                color: "#24292f",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#e9ecef",
-                borderColor: "#d6d8db80",
-            },
-            dark: {
-                primary: "#ffffff",
-                secondary: "#0e1b34",
-                background: "#051d49",
-                color: "#ffffff",
-                selectedRowOpacity: 10,
-                buttonBackgroundColor: "#2d357d",
-                borderColor: "#00000080",
-            },
-        },
+        // {
+        //     name: "Brown",
+        //     light: {
+        //         primary: "#A52A2A",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#A52A2A",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Gray",
+        //     light: {
+        //         primary: "#708090",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#708090",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Green",
+        //     light: {
+        //         primary: "#2E8B57",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#2E8B57",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Gold",
+        //     light: {
+        //         primary: "#B8860B",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#B8860B",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Magenta",
+        //     light: {
+        //         primary: "#8B008B",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#8B008B",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Orange",
+        //     light: {
+        //         primary: "#FF8C00",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#FF8C00",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Pink",
+        //     light: {
+        //         primary: "#C71585",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#C71585",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Purple",
+        //     light: {
+        //         primary: "#6A5ACD",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 20,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#a580f5",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 20,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Red",
+        //     light: {
+        //         primary: "#e63e44",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#fd4a50",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Slate",
+        //     light: {
+        //         primary: "#2F4F4F",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#2F4F4F",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Teal",
+        //     light: {
+        //         primary: "#008080",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#008080",
+        //         secondary: "#151515",
+        //         background: "#1e1e1e",
+        //         color: "#d4d4d4",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#242628",
+        //         borderColor: "#343a4080",
+        //     },
+        // },
+        // {
+        //     name: "Navy",
+        //     light: {
+        //         primary: "#051D49",
+        //         secondary: "#fff",
+        //         background: "#F8F8FC",
+        //         color: "#24292f",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#e9ecef",
+        //         borderColor: "#d6d8db80",
+        //     },
+        //     dark: {
+        //         primary: "#ffffff",
+        //         secondary: "#0e1b34",
+        //         background: "#051d49",
+        //         color: "#ffffff",
+        //         selectedRowOpacity: 10,
+        //         buttonBackgroundColor: "#2d357d",
+        //         borderColor: "#00000080",
+        //     },
+        // },
     ];
 
     return (

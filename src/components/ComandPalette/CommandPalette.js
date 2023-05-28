@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import classNames from "classnames";
-// import html2canvas from "html2canvas";
+import html2canvas from "html2canvas";
 import "./CommandPalette.css";
 
 export default function CommandPalette({ setIsDimmed }) {
@@ -29,33 +29,34 @@ export default function CommandPalette({ setIsDimmed }) {
     const palette = useRef();
     const input = useRef();
 
-    // useEffect(() => {
-    //     async function downloadImage() {
-    //         const element = palette.current;
+    useEffect(() => {
+        async function downloadImage() {
+            const element = palette.current;
 
-    //         console.log(element);
+            console.log(element);
 
-    //         const canvas = await html2canvas(element);
+            const canvas = await html2canvas(element);
 
-    //         const data = canvas.toDataURL("image/png");
-    //         const link = document.createElement("a");
+            const data = canvas.toDataURL("image/png");
+            const link = document.createElement("a");
 
-    //         if (typeof link.download === "string") {
-    //             link.href = data;
-    //             link.download = "image.png";
+            if (typeof link.download === "string") {
+                link.href = data;
+                link.download = "command-palette.png";
 
-    //             document.body.appendChild(link);
-    //             link.click();
-    //             document.body.removeChild(link);
-    //         } else {
-    //             window.open(data);
-    //         }
-    //     }
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                window.open(data);
+            }
+        }
 
-    //     if (showCmds) {
-    //         downloadImage();
-    //     }
-    // }, [showCmds, palette]);
+        if (showCmds) {
+            // NOTE: Uncomment to download
+            // downloadImage();
+        }
+    }, [showCmds, palette]);
 
     useEffect(() => {
         window.addEventListener("keydown", openModal);

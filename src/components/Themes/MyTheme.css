@@ -43,9 +43,10 @@
 #id .theme-app {
     cursor: pointer;
     display: flex;
-    height: 150px;
-    width: 200px;
     border-radius: 10px;
+
+    height: 433.5px;
+    width: 700px;
 }
 
 #id .theme-app.selected {
@@ -65,23 +66,28 @@
 }
 
 #id .theme-sidebar-title {
-    margin: 8px 4px 0px 4px;
+    /* margin: 8px 4px 0px 4px; */
+    margin: 30px 20px 0px 20px;
     padding: 0px 8px;
     font-weight: 700;
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 21px;
 }
 
 #id .theme-nav {
-    margin: 0px 4px;
-    padding: 4px 8px;
-    border-radius: 6px;
+    margin: 0px 20px;
+    /* margin: 0px 4px; */
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: 500;
-    font-size: 11px;
+    /* font-size: 11px; */
+    font-size: 17px;
     white-space: nowrap;
 }
 
 #id .theme-nav.selected {
-    margin: 4px 4px 0px 4px;
+    margin: 10px 20px 0px 20px;
+    /* margin: 4px 4px 0px 4px; */
 }
 
 #id .theme-maincontainer {
@@ -89,13 +95,14 @@
     flex-direction: column;
     flex: 2;
     border-radius: 0px 10px 10px 0px;
-    padding: 8px;
+    padding: 30px 20px 20px;
 }
 
 #id .theme-title {
     font-weight: 700;
-    font-size: 13px;
-    margin-bottom: 8px;
+    /* font-size: 13px; */
+    font-size: 21px;
+    margin-bottom: 20px;
 }
 
 #id .theme-maincontainer .btn {
@@ -126,6 +133,8 @@
 
     /*  */
 
+    font-size: 14px;
+
 }
 
 #id .theme-maincontainer .background {
@@ -134,8 +143,8 @@
     align-items: center;
     flex: 1;
     border-radius: 10px;
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 96px;
     font-weight: 500;
 }
 
