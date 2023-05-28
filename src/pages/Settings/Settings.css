@@ -1,9 +1,10 @@
 .Settings {
     display: flex;
+    flex-direction: column;
+    padding: 60px 30px;
 }
 
 .Settings .right-ctr {
-    padding: 60px 20px;
     flex: 1;
     overflow: overlay;
 }

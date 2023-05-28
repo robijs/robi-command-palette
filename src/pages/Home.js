@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MyTheme from "../components/Themes/MyTheme";
 
 export default function Home() {
     return (
@@ -30,11 +29,6 @@ export default function Home() {
             <Link to="/Docs" className="link">
                 Go to docs <i className="bi bi-caret-right-fill"></i>
             </Link>
-
-            {/* Themems */}
-            <div style={{ marginTop: "100px" }}>
-                <MyTheme />
-            </div>
         </div>
     );
 }

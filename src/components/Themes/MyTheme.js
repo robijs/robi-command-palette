@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import html2canvas from "html2canvas";
 import "./MyTheme.css";
 
@@ -22,12 +23,44 @@ function Template({ theme, mode }) {
         borderColor,
         buttonBackgroundColor,
     } = theme[mode];
+    const ref = useRef();
+
+    // useEffect(() => {
+    //     async function downloadImage() {
+    //         const element = ref.current;
+
+    //         console.log(element);
+
+    //         const canvas = await html2canvas(element);
+
+    //         const data = canvas.toDataURL("image/png");
+    //         const link = document.createElement("a");
+
+    //         if (typeof link.download === "string") {
+    //             link.href = data;
+    //             link.download = "image.png";
+
+    //             document.body.appendChild(link);
+    //             link.click();
+    //             document.body.removeChild(link);
+    //         } else {
+    //             window.open(data);
+    //         }
+    //     }
+
+    //     console.log(name);
+
+    //     if (name === "Blue") {
+    //         downloadImage();
+    //     }
+    // }, [name]);
 
     return (
         <div
             className="theme-app"
             style={{ color, border: `solid 1px ${borderColor}` }}
             data-theme={name}
+            ref={ref}
         >
             <div
                 className="theme-sidebar"
